@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--XML struktúra a KIRA interface adat-átadáshoz
+A KIRA kódok a KIRA-ból lekérdezhetőek, illetve az interface leírás
+tartalmazza azokat.
+A dátumok kizárólag 1900-01-01 formátuban tárolhatóak
+A dátum adatok közül a "soha le nem járó" adat értéke: 3999-12-31
+Az egyes KIRA kódok karakterszámhoz kötöttek
+Minden adatbetöltés <HR_TO_KIRA_MUNK> található
+Egy munkavállalóhoz szükséges adatok, és kódok a <JOGVISZONY></JOGVISZONY> között kell lennie
+-->
+<HR_TO_KIRA_MUNK>
+	<ADMIN> <!--Intézmény törzsadatai-->
+		<AD_TORZSSZAM></AD_TORZSSZAM> <!--A szervezet egyedi törzsszáma, KIRA adat-->
+		<AD_VP_AZON></AD_VP_AZON> <!--Azonosító-->
+		<AD_ATSSZAM></AD_ATSSZAM> <!--Átadás-szám egy folyamatosan növekvő szám-->
+		<AD_ATSDATUM></AD_ATSDATUM> <!--Átadás dátuma-->
+		<AD_HRNEV></AD_HRNEV> <!--HR rendszer neve-->
+		<AD_HRVERZIO></AD_HRVERZIO> <!--HR rendszer verziószáma-->
+	</ADMIN>
+	<JOGVISZONY> <!--jogviszonyhoz kapcsolódó adatok-->
+			<JV_STATUSZJEL></JV_STATUSZJEL> <!--Új munkavállaló felvétele esetén U, Módosítás esetén M-->
+			<JV_SZEM_ADOAZON></JV_SZEM_ADOAZON> <!--személy adóazonosítója-->
+			<JV_FG_FOGSOR></JV_FG_FOGSOR> <!--Foglalkoztatási sor, KIRA adat-->
+			<JV_HATALYA></JV_HATALYA> <!--Jogviszony hatálya-->
+			<JV_HRAZON></JV_HRAZON> <!--A HR rendszerben tárolt egyedi azonosítója a munkavállalónak-->
+		<SZEMELY> <!--személyhez kapcsolódó személyes adatok-->
+			<SZEM_ADOAZON></SZEM_ADOAZON> <!--személy adóazonosítója-->
+			<SZEM_TAJSZAM></SZEM_TAJSZAM> <!--személy tajszáma-->
+			<SZEM_ELONEV></SZEM_ELONEV> <!--előnév, KIRA kód szerint-->
+			<SZEM_CSNEV></SZEM_CSNEV> <!--személy vezetékneve-->
+			<SZEM_UNEV></SZEM_UNEV> <!--személy első utóneve-->
+			<SZEM_UNEV2></SZEM_UNEV2> <!--személy második utóneve-->
+			<SZEM_SZCSNEV></SZEM_SZCSNEV> <!--személy születési vezetékneve-->
+			<SZEM_SZULNEV></SZEM_SZULNEV> <!--személy születési utóneve-->
+			<SZEM_SZULNEV2></SZEM_SZULNEV2> <!--személy születési második utóneve-->
+			<SZEM_SZULHELY></SZEM_SZULHELY> <!--személy születési hely-->
+			<SZEM_SZULDATUM></SZEM_SZULDATUM> <!--személy születési dátuma-->
+			<SZEM_ACSNEV></SZEM_ACSNEV> <!--személy anyjának vezetékneve-->
+			<SZEM_AUNEV></SZEM_AUNEV> <!--személy anyjának első utóneve-->
+			<SZEM_AUNEV2></SZEM_AUNEV2> <!--személy anyjának második utóneve-->
+			<SZEM_NEME></SZEM_NEME> <!--személy neme, KIRA kód szerint-->
+			<SZEMV_ALLAMPOLG></SZEMV_ALLAMPOLG> <!--személy állampolgársága, Országkód, KIRA kód szerinti lista alapján-->
+			<SZEMV_KFILL></SZEMV_KFILL> <!--külföldi illetőség-->
+			<SZEMV_KFOKSZAM></SZEMV_KFOKSZAM> <!--külföldi okmány száma-->
+			<SZEMV_KFALLAM></SZEMV_KFALLAM> <!--külföldi állam megnevezése-->
+			<SZEMV_KFBIZT></SZEMV_KFBIZT> <!--külföldön biztosított, KIRA kód szerint I/N -->
+			<SZEMV_KFBIZTORSZ></SZEMV_KFBIZTORSZ> <!--külföldön biztosított ország Országkódja, KIRA kód szerinti lista alapján-->
+			<SZEMV_KFBIZTKEZD></SZEMV_KFBIZTKEZD> <!--külföldi biztosítás kezdete-->
+			<SZEMV_KFBIZTVEGE></SZEMV_KFBIZTVEGE> <!--külföldi biztosítás vége-->
+			<SZEMV_OSTERMIG></SZEMV_OSTERMIG> <!--személy őstermelői igazolványszáma-->
+			<SZEMV_CSNYILVAN></SZEMV_CSNYILVAN> <!--személy családi gazdaság nyilvántartási száma-->
+		</SZEMELY>
+		<CIM> <!--személy lakcímadata-->
+			<CIM_CIMTIP></CIM_CIMTIP> <!--cím típusa, KIRA kód-->
+			<CIM_ORSZKOD></CIM_ORSZKOD> <!--Országkód, KIRA kód szerini lista alapján-->
+			<CIM_TEL_AZON></CIM_TEL_AZON> <!--Település azonosítója, KIRA kód-->
+			<CIM_KSH></CIM_KSH> <!--település KSH kódja, KIRA kód-->
+			<CIM_TELNEV></CIM_TELNEV> <!--Település neve, KIRA lista-->
+			<CIM_IRSZAM></CIM_IRSZAM> <!--Település irányítószáma, KIRA lista-->
+			<CIM_KHELYSEG></CIM_KHELYSEG> <!--Külföldi helység megnevezése-->
+			<CIM_KOZNEV></CIM_KOZNEV> <!--közterület neve-->
+			<CIM_KOZJEL></CIM_KOZJEL> <!--közterület jellege, KIRA kód-->
+			<CIM_HAZSZAM></CIM_HAZSZAM> <!--házszám-->
+			<CIM_EPULET></CIM_EPULET> <!--épület-->
+			<CIM_LEPCSOHAZ></CIM_LEPCSOHAZ> <!--lépcsőház-->
+			<CIM_EMELET></CIM_EMELET> <!--emelet-->
+			<CIM_AJTO></CIM_AJTO> <!--ajtó-->
+		</CIM>
+		<NYUGDIJAS><!--Nyugdíjas státusz, melyet üresen hagyunk-->
+		</NYUGDIJAS>
+		<HOZZATARTOZO> <!--Hozzátartozók státusza, melyet, amennyiben van a KIRA-ban rögzíte a megadott #### kóddal betölti-->
+			<SZEM_HOZTIP>####</SZEM_HOZTIP>
+		</HOZZATARTOZO>
+		<FOGLALKOZTATASK> <!--Foglalkoztatáshoz kapcsolódó adatok-->
+			<FOGLALKOZTATAS> <!--A foglalkoztatáshoz szükséges közvetlen adatok-->
+				<FV_TORZSSZAM></FV_TORZSSZAM> <!--intézmény törzsszáma-->
+				<FG_FOGSOR></FG_FOGSOR> <!--Foglalkoztatási sor, mely alapból nem látható, üresen hagyandó új betöltés esetén-->
+				<FV_SZERVEGYSEG></FV_SZERVEGYSEG> <!--Szervezeti egység kódja, KIRA által tárolt, az intézmény által meghatározott lista-->
+				<FV_FKSZLA></FV_FKSZLA> <!--Főkönyvi számla a szervezeti egységlista alapján-->
+				<FV_TEMASZAM></FV_TEMASZAM> <!--Az intézmény által megadott témaszám, a szervezeti egységlista alapján-->
+				<FV_COFOG></FV_COFOG> <!--kormányzati funkció-->
+				<FV_JOGTIPKOD></FV_JOGTIPKOD> <!--jogtipus kódja, KIRA kód-->
+				<FG_JOGVKEZDETE></FG_JOGVKEZDETE> <!--jogviszony kezdete-->
+				<FV_BERTABLA></FV_BERTABLA> <!--bértábla kódja, KIRA kód-->
+				<FG_MLTIP></FG_MLTIP> <!--Munkába lépés típusa, KIRA kód-->
+				<FG_ELSOJOGV></FG_ELSOJOGV> <!--Első jogviszony I/N kód-->
+				<FG_ISKVEGE></FG_ISKVEGE> <!--iskolai végzettség vége első jogviszony I esetén-->
+				<FV_MUNKAREND></FV_MUNKAREND> <!--Munkarend, KIRA kód-->
+				<FV_MIDOBEOSZT></FV_MIDOBEOSZT> <!--Munkaidő beosztás, KIRA kód-->
+				<FV_FMUSZAKREND></FV_FMUSZAKREND> <!--Műszakrend, KIRA kód-->
+				<FV_FMIDOJEL></FV_FMIDOJEL> <!--Munkaidő jellege, KIRA kód-->
+				<FV_FG_JIDOTARTAM></FV_FG_JIDOTARTAM> <!--Jogviszony időtartalma, KIRA kód-->
+				<FV_FSTATUSZ></FV_FSTATUSZ> <!--foglalkoztatás státusza, KIRA kód-->
+				<FV_MTIP></FV_MTIP> <!--Munkába lépés típusa, KIRA kód-->
+				<FV_FG_TOHOSZ></FV_FG_TOHOSZ> <!--Munkaidő törvényes hossza-->
+				<FV_TEHOSZ></FV_TEHOSZ> <!--Munkaidő tényleges hossza-->
+				<FV_FG_HAVIORA></FV_FG_HAVIORA> <!--havi óra órabéresek esetén-->
+				<FG_PROBAIDOKEZD></FG_PROBAIDOKEZD> <!--Próbaidő kezdete-->
+				<FG_PROBAIDOVEG></FG_PROBAIDOVEG> <!--Próbaidő vége-->
+				<!--KTTVs esetén értelmezhető, nem releváns, de kötelező üres mezőelemek innentől-->
+				<FG_BESKEZD></FG_BESKEZD> 
+				<FG_VKSZKEZD></FG_VKSZKEZD>
+				<FG_JUBSZKEZD></FG_JUBSZKEZD> 
+				<FG_SZNYSZKEZD></FG_SZNYSZKEZD> 
+				<FG_SZJSZKEZD></FG_SZJSZKEZD>
+				<!--idáig-->
+				<FV_MKOR></FV_MKOR> <!--munkakör, KIRA kód-->
+				<FV_FKOR></FV_FKOR> <!--feladatkör, KIRA kód-->
+				<FV_BESKULCSSZAM></FV_BESKULCSSZAM> <!--besorolási kulcsszám, KIRA kód-->
+				<FV_BESFEOR></FV_BESFEOR> <!--besorolási FEOR, FEOR kód-->
+				<FV_BESBERTABLA></FV_BESBERTABLA> <!--besorolási bértábla, KIRA kód-->
+				<FV_FG_KULCSSZAM></FV_FG_KULCSSZAM> <!--kulcsszám, KIRA kód-->
+				<FV_FEOR></FV_FEOR> <!--FEOR, FEOR kód-->
+				<FV_FG_BERTABLA></FV_FG_BERTABLA> <!--bértábla, KIRA kód-->
+				<FV_KOVKOTLEP></FV_KOVKOTLEP>
+				<FV_UTMOD></FV_UTMOD> <!--utalás módja, KIRA kód-->
+				<!--A következő adatok egészségügyi, rendészeti dolgozók esetén relevánsak innentől-->
+				<FV_AZON></FV_AZON>
+				<FV_FG_NEV></FV_FG_NEV>
+				<FV_KJAZON></FV_KJAZON>
+				<FV_KJNEV></FV_KJNEV>
+				<FV_MJAZON></FV_MJAZON>
+				<FV_MJNEV></FV_MJNEV>
+				<FV_ERKEP></FV_ERKEP>
+				<FV_FOGTER></FV_FOGTER>
+				<FV_UGYESZSEGIMEGB></FV_UGYESZSEGIMEGB>
+				<FV_ESKU></FV_ESKU>
+				<!--idáig-->
+				<FV_JELMINTA></FV_JELMINTA> <!-- beosztási jelminta, KIRA kód-->
+				<FV_JELKEZD></FV_JELKEZD> <!--jelminta kezdete-->
+				<FV_INDITAS></FV_INDITAS> <!--jelminta kezdetének napja, napkód szerint-->
+				<!--Nem releváns mezők innentől-->
+				<HMREFERATURA></HMREFERATURA>
+				<EFOKFTEV></EFOKFTEV>
+				<FOGLINF></FOGLINF>
+				<KOZALKIDO></KOZALKIDO>
+				<ASZISZKEZD></ASZISZKEZD>
+				<!--idáig-->
+				<HATFOGL> <!--határozott foglalkoztatás esetén kitöltendő-->
+					<FV_HATVEGE></FV_HATVEGE> <!--határozott idő vége-->
+					<FV_HATJELLEG></FV_HATJELLEG> <!--határozott idő jellege, KIRA kód-->
+					<FV_FG_HATFEL></FV_FG_HATFEL> <!--Feladat ellátása esetén feladat megnevezése-->
+					<FV_HADOAZON></FV_HADOAZON> <!--Helyettesítés esetén a helyettesítendő személy adóazonosítója-->
+					<FV_HFOGSOR></FV_HFOGSOR> <!--Helyettesítés esetén a helyettesítendő személy foglalkoztatási sora-->
+					<FV_HATOK></FV_HATOK> <!--Helyettesítés esetén a helyettesítés oka-->
+				</HATFOGL>
+				<!--Nem releváns elemek az MT foglalkoztatáshoz nem szükségesek innentől-->
+				<HSZTSPEC>
+					<FV_PJAZON></FV_PJAZON>
+					<FV_PJNEV></FV_PJNEV>
+					<FG_NYILVSZAM></FG_NYILVSZAM>
+					<FV_HBEREND></FV_HBEREND>
+					<FV_BEOSZT></FV_BEOSZT>
+					<FV_RENDFOK></FV_RENDFOK>
+					<FV_KOVRENDFOKDAT></FV_KOVRENDFOKDAT>
+					<FV_RUHANORMA></FV_RUHANORMA>
+					<ALAPILLHSZT></ALAPILLHSZT>
+				</HSZTSPEC>
+				<GYAKORNOK>
+					<FGY_GYAKKEZDETE></FGY_GYAKKEZDETE>
+					<FGY_GYAKVEGE></FGY_GYAKVEGE>
+					<FGY_GYAKMEGNEV></FGY_GYAKMEGNEV>
+					<FGY_GYAKRENDELET></FGY_GYAKRENDELET>
+					<FGY_GYAKVIZSGA></FGY_GYAKVIZSGA>
+				</GYAKORNOK>
+				<MKERET>
+					<MKK_MKMERTTIP></MKK_MKMERTTIP>
+					<MKK_MKERTEK></MKK_MKERTEK>
+					<MKK_MKEKEZD></MKK_MKEKEZD>
+					<MKK_MKEZDETE></MKK_MKEZDETE>
+					<MKK_MVEGE></MKK_MVEGE>
+				</MKERET>
+				<KOZFOGL>
+					<KF_SZERZODESSZAM></KF_SZERZODESSZAM>
+					<KF_KEPZKEZD></KF_KEPZKEZD>
+					<KF_KEPZVEGE></KF_KEPZVEGE>
+					<KF_MUNKAKOR2></KF_MUNKAKOR2>
+					<KF_MNK2NEV></KF_MNK2NEV>
+					<KF_FEOR2></KF_FEOR2>
+					<KF_BER2></KF_BER2>
+					<KF_MUNKAKOR3></KF_MUNKAKOR3>
+					<KF_MNK3NEV></KF_MNK3NEV>
+					<KF_FEOR3></KF_FEOR3>
+				</KOZFOGL>
+				<!--idáig-->
+			</FOGLALKOZTATAS>
+			<ILLETMENYEK> 	<!--illetmény adatok-->
+				<FLT_ILLTIP></FLT_ILLTIP> 	<!--illetmény típusa, KIRA kód-->
+				<FLT_JOGCIM></FLT_JOGCIM> 	<!--Jogcím kódja, KIRA kód-->
+				<FLT_NEV></FLT_NEV> 	<!--Jogcím neve, KIRA kódlista alapján-->
+				<FLT_RSZAZALEK></FLT_RSZAZALEK> 	<!--illetmény részszázalék-->
+				<FLT_RERTEKE></FLT_RERTEKE> 	<!--illetmény részérték-->
+				<FLT_SZAZALEK></FLT_SZAZALEK> 	<!--illetmény százalék-->
+				<FLT_ERTEKE></FLT_ERTEKE> 	<!--illetmény értéke-->
+				<FLT_KEZDETE></FLT_KEZDETE> 	<!--illetmény kezdete-->
+				<FLT_VEGE></FLT_VEGE> 	<!--illetmény vége-->
+				<KTSGCOF> 	<!--költségek elszámolásához-->
+				<KI_COFOG></KI_COFOG> 	<!--kormányzati funkció-->
+				<KI_SZERVEGYSEG></KI_SZERVEGYSEG> 	<!--szervezeti egység, lista alapján-->
+				<KI_FKSZLA></KI_FKSZLA> 	<!--főkönyvi számla, lista alapján-->
+				<KI_TEMASZAM></KI_TEMASZAM> 	<!--témaszám, lista alapján-->
+				<KI_KTSGSZAZ></KI_KTSGSZAZ> 	<!--költség százalék-->
+				<KI_KTSGFT></KI_KTSGFT> 	<!--költség értéke-->
+				</KTSGCOF>
+			</ILLETMENYEK>
+			<SZAMLASZAM> 	<!--számlaszám adatok-->
+				<FSZLA_FSZLA></FSZLA_FSZLA> 	<!--számlaszám számsora-->
+				<FSZLA_FIXOSSZEG></FSZLA_FIXOSSZEG> 	<!--fix összeg beállítása-->
+				<FSZLA_PRIORITAS></FSZLA_PRIORITAS> 	<!--prioritás beállítása-->
+				<FSZLA_NSZAZALEK></FSZLA_NSZAZALEK> 	<!--százalék beállítása-->
+				<FSZLA_ALAPERT></FSZLA_ALAPERT> 	<!--alapértelmezett számla, I/N mező-->
+				</SZAMLASZAM>
+					<!--MT jogviszony esetén nincsenek vezetők, így ez az elem is üres marad-->
+			<VEZETO>
+			</VEZETO>
+			<KEPZETTSEG> 	<!--Végzettség adatok, az MT-s munkavállalók esetében minimum 1 rögzítendő-->
+				<ISK_KVJELZO></ISK_KVJELZO> 	<!--végzettség jellege, KIRA kód-->
+				<ISK_KVKOD></ISK_KVKOD> 	<!--végzettség típusa, KIRA kód-->
+				<ISK_KVEGYEB></ISK_KVEGYEB> 	<!--egyéb esetén-->
+					<!--MT esetén nem kitölthető adatok innentől-->
+				<ISK_EDAT></ISK_EDAT>
+				<ISK_EJOGSZAB></ISK_EJOGSZAB>
+				<ISK_EJOGKOV></ISK_EJOGKOV>
+					<!--idáig-->
+				<ISK_INTEZMENY></ISK_INTEZMENY> 	<!--intézmény megnevezése-->
+				<ISK_SZAK></ISK_SZAK> 	<!--végzettség megnevezése-->
+				<ISK_MDAT></ISK_MDAT> 	<!--végzettség megszerzsének dátuma-->
+				<ISK_OKLEVEL></ISK_OKLEVEL> 	<!--végzettség oklevélszáma-->
+				<ISK_KVBEJEL></ISK_KVBEJEL> 
+			</KEPZETTSEG>
+			<NYELVISMERET>
+			</NYELVISMERET>
+			</FOGLALKOZTATASK>
+</JOGVISZONY>
+</HR_TO_KIRA_MUNK>
